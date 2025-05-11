@@ -1,0 +1,21 @@
+.profile {
+    border-radius: 50%;
+    width: 30rem;
+    height: 30rem;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.left-margin {
+    margin-left: 5rem;
+}
