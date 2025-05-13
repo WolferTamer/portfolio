@@ -18,10 +18,7 @@ function NavBar() {
                 <a href="/skills">Skills</a>
                 </li>
                 <li>
-                <a href="/nextnest">NextNest</a>
-                </li>
-                <li>
-                <a href="/colorpalette">Color Palette</a>
+                <a href="/projects">Projects</a>
                 </li>
             </ul>
         </nav>

@@ -1,0 +1,16 @@
+.project-page img {
+    max-width: 100%;
+}
+
+.projects-flex {
+    display: flex;
+    direction: row;
+    flex-wrap: wrap;
+}
+
+.projects-flex div {
+    min-width: 10rem;
+    flex: 1 1 10rem;
+    margin: 0 2rem 0 2rem;
+    text-align: left;
+}

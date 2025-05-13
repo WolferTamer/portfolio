@@ -5,6 +5,7 @@ import Contacts from "./pages/Contacts.jsx";
 import NextNest from "./pages/NextNest.jsx";
 import Skills from "./pages/Skills.jsx";
 import ColorPalette from "./pages/ColorPalette.jsx";
+import Projects from "./pages/Projects.jsx";
   
   export default function Router () {
     return (<BrowserRouter>
@@ -12,6 +13,7 @@ import ColorPalette from "./pages/ColorPalette.jsx";
         <Route index element={<Home />} />
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contacts/>}/>
+        <Route path="/projects" element={<Projects/>}/>
         <Route path="/nextnest" element={<NextNest/>}/>
         <Route path="/colorpalette" element={<ColorPalette/>}/>
         <Route path="/skills" element={<Skills/>}/>

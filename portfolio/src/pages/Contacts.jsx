@@ -2,15 +2,17 @@ import github from '/github.png'
 import linkedin from '/linkedin.png'
 import emailim from '/email.png'
 import './Contacts.css'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 function Contacts() {
-
+    const form = useRef()
     const [email, setEmail] = useState('')
     const [fname, setfName] = useState('')
     const [lname, setlName] = useState('')
     const [message, setMessage] = useState('')
     const [emailError, setEmailError] = useState('');
+    const [blur,setBlur] = useState(false)
     
     const  validateEmail = () => {
         if (!/\S+@\S+\.\S+/.test(email)) {
@@ -23,8 +25,25 @@ function Contacts() {
 
     const submitHandler = (e) => {
         e.preventDefault();
+        setBlur(true)
         if(validateEmail()) {
-            console.log('wow')
+            emailjs
+            .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {
+                publicKey: import.meta.env.VITE_EMAILJS_KEY,
+            })
+            .then(
+                () => {
+                console.log('SUCCESS!');
+                setEmailError('Success! Please wait to hear back from me.')
+                },
+                (error) => {
+                console.log('FAILED...', error.text);
+                setBlur(false)
+                setEmailError('Failed to send contact request... Try again')
+                },
+            );
+        } else {
+            setBlur(false)
         }
     }
 
@@ -40,21 +59,21 @@ function Contacts() {
                 <p>calebbcassin@gmail.com</p> <img src={emailim}/> 
             </a>
         </div>
-        <form className='grid-item' onSubmit={submitHandler}>
+        <form ref={form} className='grid-item' onSubmit={submitHandler}>
 
             <label htmlFor="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name.." onChange={(e) => setfName(e.target.value)} required/>
+            <input disabled={blur} type="text" id="fname" name="fname" placeholder="Your name.." onChange={(e) => setfName(e.target.value)} required/>
 
             <label htmlFor="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" onChange={(e) => setlName(e.target.value)} placeholder="Your last name.."/>
+            <input disabled={blur} type="text" id="lname" name="lname" onChange={(e) => setlName(e.target.value)} placeholder="Your last name.."/>
 
             <label htmlFor="email">Contact Info</label>
-            <input type="text" id="email" name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Your Email..." required/>
+            <input disabled={blur} type="text" id="email" name="email" onChange={(e) => setEmail(e.target.value)} placeholder="Your Email..." required/>
 
             <label htmlFor="subject">Subject</label>
-            <textarea id="subject" name="subject" onChange={(e) => setMessage(e.target.value)} placeholder="Write something.." required/>
+            <textarea disabled={blur} id="subject" name="subject" onChange={(e) => setMessage(e.target.value)} placeholder="Write something.." required/>
             
-            <input type="submit" value="Submit"/>
+            <input disabled={blur} type="submit" value="Submit"/>
             {emailError && <p>{emailError}</p>}
         </form>
     </div>)
