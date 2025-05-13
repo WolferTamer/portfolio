@@ -4,7 +4,6 @@ import NavBar from './components/NavBar.jsx'
 import Router from './Router.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

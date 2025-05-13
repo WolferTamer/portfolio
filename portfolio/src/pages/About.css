@@ -10,4 +10,10 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.row * {
+    min-width: 20rem;
+    flex: 1 1 0;
 }

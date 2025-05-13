@@ -1,0 +1,86 @@
+.skill {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1 1 0;
+    margin: 1rem 1rem 1rem 1rem;
+    min-width:45%
+}
+
+.skill-row {
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+h1 {
+    margin-top:0;
+}
+.text-row {
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.text-row * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text-row h3 {
+    margin-left: auto
+}
+
+.bar {
+    width: 100%;
+    min-width: 20rem;
+    height: 16px;
+    border-radius: 2rem;
+    background-color: #123123;
+    overflow: hidden;
+    margin: 0;
+}
+
+.skill * {
+    text-align: left;
+}
+
+.progress {
+    background-color: green;
+    height:100%;
+    margin: 0;
+}
+
+p.w-20 {
+    max-width: 30rem;
+}
+
+.progress.w-50 {
+    width: 50%;
+}
+.progress.w-70 {
+    width: 70%;
+}
+.progress.w-75 {
+    width: 75%;
+}
+.progress.w-30 {
+    width: 30%;
+}
+.progress.w-90 {
+    width: 90%;
+}
+.progress.w-60 {
+    width: 60%;
+}
+.progress.w-80 {
+    width: 80%;
+}
+
+.center-flex {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}

@@ -6,14 +6,18 @@
 
 .flexbox {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    flex-wrap: wrap;
 }
 
 .text-left {
     text-align: left;
+}
+
+p.w-20 {
+    min-width: 10rem;
+    max-width: 20rem;
 }
 
 .left-margin {
