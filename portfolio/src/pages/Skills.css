@@ -37,7 +37,7 @@ h1 {
     min-width: 20rem;
     height: 16px;
     border-radius: 2rem;
-    background-color: #123123;
+    background-color: #bc6c25;
     overflow: hidden;
     margin: 0;
 }
@@ -47,7 +47,7 @@ h1 {
 }
 
 .progress {
-    background-color: green;
+    background-color: #ffb703;
     height:100%;
     margin: 0;
 }

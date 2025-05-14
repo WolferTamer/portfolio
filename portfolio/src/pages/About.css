@@ -11,6 +11,11 @@
     justify-content: space-around;
     align-items: stretch;
     flex-wrap: wrap;
+    text-align: left;
+}
+
+.row div {
+    margin: 0 2rem 0 2rem
 }
 
 .row * {
