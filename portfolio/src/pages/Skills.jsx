@@ -1,6 +1,7 @@
 import './Skills.css'
 
 function Skills() {
+    document.title="Caleb - Skills"
  return (
     <div className="center-flex">
         <h1>Coding Proficiencies</h1>

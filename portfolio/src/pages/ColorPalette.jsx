@@ -1,6 +1,7 @@
 import pngtofap from '/pngtofap.png'
 
 function ColorPalette() {
+    document.title="Caleb - Color Palette Project"
  return (<div className="project-page">
          <h1>Color Palette Picker</h1>
          <a href="https://pngtofap-production.up.railway.app/" target="_blank">pngtofap-production.up.railway.app</a>

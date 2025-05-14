@@ -4,6 +4,7 @@ import question from '/nextnestquestion.png'
 import './Projects.css'
 
 function NextNest() {
+    document.title="Caleb - NextNest Project"
     return (<div className="project-page">
         <h1>NextNest</h1>
         <a href="https://next-nest.net/" target="_blank">next-nest.net</a>

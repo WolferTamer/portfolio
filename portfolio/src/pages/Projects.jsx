@@ -1,4 +1,5 @@
 function Projects() {
+    document.title="Caleb - Projects"
     return (<div className="projects-flex">
         <div>
             <h2><a href="nextnest">NextNest</a></h2>

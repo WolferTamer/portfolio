@@ -6,6 +6,7 @@ import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 
 function Contacts() {
+    document.title="Caleb - Contacts"
     const form = useRef()
     const [email, setEmail] = useState('')
     const [fname, setfName] = useState('')

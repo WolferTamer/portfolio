@@ -1,6 +1,6 @@
 import './About.css'
 function About() {
-
+    document.title="Caleb - About"
     return (
         
         <div className="column">

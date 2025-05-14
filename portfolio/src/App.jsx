@@ -5,6 +5,8 @@ import Router from './Router.jsx'
 
 function App() {
 
+  document.title="Caleb - Home"
+
   return (
     <>
       <NavBar/>
